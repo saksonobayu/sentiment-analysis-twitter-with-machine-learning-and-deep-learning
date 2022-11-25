@@ -1,17 +1,16 @@
+import numpy as np
+import pandas as pd
+from sklearn.model_selection import train_test_split
 
-# import numpy as np
-# import pandas as pd
-# from sklearn.model_selection import train_test_split
+import nltk
+from nltk.corpus import stopwords
+from nltk.classify import SklearnClassifier
 
-# import nltk
-# from nltk.corpus import stopwords
-# from nltk.classify import SklearnClassifier
+from wordcloud import WordCloud,STOPWORDS
+import matplotlib.pyplot as plt
+%matplotlib inline
 
-# from wordcloud import WordCloud,STOPWORDS
-# import matplotlib.pyplot as plt
-# # %matplotlib inline
-
-# from subprocess import check_output
+from subprocess import check_output
 
 data = pd.read_csv('/content/Sentiment.csv')
 data = data[['text','sentiment']]
